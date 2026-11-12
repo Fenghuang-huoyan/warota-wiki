@@ -1,0 +1,49 @@
+[
+  {
+    "q": "When does Warota release?",
+    "a": "The Steam release_date field on 12 November 2026 is Nov 13, 2026, with coming_soon true. The English store page said the game was not yet available. A Steam event subtitle on that page says Early Access launches November 13 at midnight JST. The English official site banner says Early Access Starts Nov 13, while its SPEC table still prints Steam / Winter 2026. This wiki follows the Steam date and still describes the full game as upcoming.",
+    "featured": true
+  },
+  {
+    "q": "What is Warota: I Live Next to The Demon King's Castle LOL?",
+    "a": "Steam calls it a village-building action RPG. You are reincarnated into a ravaged world ruled by the Demon King, gather resources, build a village, and swap hats to change classes. When the Idol Demon King holds a live concert, monsters stampede toward the village. Genres on the store page are Action, Indie, RPG, and Early Access.",
+    "featured": true
+  },
+  {
+    "q": "Who develops and publishes Warota?",
+    "a": "Steam lists developers One or Eight and Team EARTHWARS, and publisher One or Eight. The English official site prints publisher ONE OR EIGHT INC. and developer Team EARTH WARS. The Steam legal line is © oneoreight All Rights Reserved. This wiki is not affiliated with One or Eight, Team EARTHWARS, or Valve.",
+    "featured": true
+  },
+  {
+    "q": "Are there Warota codes?",
+    "a": "No redeem-code list was on the Steam store page, the demo listing, or the official site checked on 12 November 2026. This site does not invent codes and does not have a codes page.",
+    "featured": true
+  },
+  {
+    "q": "How do hat classes work?",
+    "a": "The store says hats carry the goddess's power and the hat you wear determines your Job Class. It gives examples — Farmers and Lumberjacks, Warriors and Mages, plus a Chef and a Guard for villagers — and says there are more than 20 Job Classes. It does not print the full roster, so this site does not invent one.",
+    "featured": true
+  },
+  {
+    "q": "What is Demon King Live?",
+    "a": "It is the idol Demon King's concert. The store says each concert sends frenzied monsters toward your village. The printed response is to team up with villagers, fortify defenses, hold the waves, and defeat bosses. No wave timer, wave count, or English boss list was on the page checked.",
+    "featured": true
+  },
+  {
+    "q": "What are Goddess's Blessings?",
+    "a": "You pray at Goddess Statues for blessings. Steam's examples are higher attack power, faster health recovery, and elemental attributes. Blessings stack. No blessing table, with names and numbers, was printed.",
+    "featured": true
+  },
+  {
+    "q": "Is a Warota demo available?",
+    "a": "Yes. Steam lists a free demo, AppID 5214670, with release date 7 Oct 2026 and coming_soon false. Its short description matches the full game's. The full game itself was still coming soon on 12 November 2026."
+  },
+  {
+    "q": "Can I play Warota on Mac or a console at Early Access?",
+    "a": "The full-game appdetails platforms field on 12 November 2026 lists Windows only. Mac and Linux are false. The English official site also names Nintendo Switch 2 and PlayStation 5, with those versions marked Coming 2027. The Early Access date Steam prints is for the Steam listing."
+  },
+  {
+    "q": "Is this site official?",
+    "a": "No. warota.wiki is a fan guide. It is not affiliated with One or Eight, Team EARTHWARS, Valve, or Steam. The official site printed on the store page is https://one-or-eight.co.jp/WRT/. The support email in Steam appdetails is support@studio18.co.jp. That mailbox is not this wiki's."
+  }
+]

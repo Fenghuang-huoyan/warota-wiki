@@ -1,0 +1,12 @@
+{
+  "release": "13 Nov 2026",
+  "price": "13 Nov 2026",
+  "priceNote": "Planned Early Access date. On 12 Nov 2026 appdetails still had coming_soon true, and package_groups was empty, so no public price was in that payload.",
+  "players": "Single-player",
+  "playersNote": "The player-mode line on the English store feature list. The English official site also says single-player.",
+  "reviews": "No reviews",
+  "reviewsNote": "The full-game store page showed no user reviews on 12 Nov 2026. Platforms in appdetails: Windows only.",
+  "modes": "Free demo",
+  "modesNote": "Demo AppID 5214670, is_free true, release date 7 Oct 2026 with coming_soon false.",
+  "platforms": "Windows"
+}
