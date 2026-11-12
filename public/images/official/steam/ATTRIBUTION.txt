@@ -1,0 +1,81 @@
+Official Steam store assets for Warota: I Live Next to The Demon King's Castle LOL (AppID 2860490).
+Self-hosted so the wiki does not hotlink the Steam CDN at page-view time.
+The bytes were downloaded from the Steam store CDN on 12 Nov 2026.
+Fan site: not affiliated with One or Eight, Team EARTHWARS, Valve, or Steam.
+Store page: https://store.steampowered.com/app/2860490/Warota_I_Live_Next_to_The_Demon_Kings_Castle_LOL/
+Appdetails header and capsule URLs use asset cache t=1792995452.
+
+Library assets
+  These unhashed paths returned HTTP 404 on 12 Nov 2026, on Akamai, Fastly, and Cloudflare Steam hosts:
+  library_hero.jpg, library_hero_2x.jpg, library_header.jpg, library_600x900.jpg,
+  and the unhashed header.jpg / capsule_616x353.jpg paths.
+  This folder uses the hashed store header and capsules that did return 200.
+  There is no library-hero file here because Steam did not serve one at those URLs.
+
+header.jpg
+  Store header from appdetails header_image, 460x215
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2860490/25cd77fbd2add6f77ec6e1b62429b416254d02c1/header.jpg?t=1792995452
+
+capsule-616x353.jpg
+  Store capsule, 616x353, from the English store page image_src
+  https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2860490/11060da728a58fca07e3e11019a53f31369fc950/capsule_616x353.jpg?t=1792995452
+
+capsule-231x87.jpg
+  Small store capsule, 231x87, from appdetails capsule_image
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2860490/7d49f28711b4b7dc6ddde182eb5252d37842b56e/capsule_231x87.jpg?t=1792995452
+
+Screenshots are the 600x338 store thumbnails from appdetails on 12 Nov 2026 (t=1792995452).
+Full-size 1920x1080 files exist on the CDN at the same paths with .1920x1080.jpg. This site stores the thumbnails.
+On-screen text in these frames is Japanese. This English guide does not treat that UI text as a translated fact sheet.
+
+ss-00.jpg
+  A small figure faces a tall white-robed figure inside a blue columned pavilion at night. Japanese subtitles run along the bottom.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2860490/d39e681cf7120df3b51866ae59b020675f48787a/ss_d39e681cf7120df3b51866ae59b020675f48787a.600x338.jpg?t=1792995452
+
+ss-01.jpg
+  Night village fight: a large green monster, pink buildings, fireworks, and a hotbar.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2860490/15e6d6a2e19a6014ec3d9933374776515aeb7af1/ss_15e6d6a2e19a6014ec3d9933374776515aeb7af1.600x338.jpg?t=1792995452
+
+ss-02.jpg
+  Daytime farm plots, two characters in wide straw hats, fences, a windmill, and houses on a cliff.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2860490/d3dc5f47484655940931bc6b35cadbf33d7a1b21/ss_d3dc5f47484655940931bc6b35cadbf33d7a1b21.600x338.jpg?t=1792995452
+
+ss-03.jpg
+  Desert ruins: characters in wide hats face a stacked green creature among cacti and broken columns.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2860490/d6585b06f30a49ee4244ccc851b3eb03a3a495a9/ss_d6585b06f30a49ee4244ccc851b3eb03a3a495a9.600x338.jpg?t=1792995452
+
+ss-04.jpg
+  Fenced pasture with round white animals, a glass-roofed shed, and the sea beyond cliffs.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2860490/136b5187104b49a9148a17564836e1e0d3b54826/ss_136b5187104b49a9148a17564836e1e0d3b54826.600x338.jpg?t=1792995452
+
+ss-05.jpg
+  Snowy night scene with villagers, low huts, and a dialogue box.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2860490/559451cafbe789d29ce28e63120797f890cd8dde/ss_559451cafbe789d29ce28e63120797f890cd8dde.600x338.jpg?t=1792995452
+
+ss-06.jpg
+  Night village plot with a campfire, a two-story house, a tower, and small characters.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2860490/b72fc470f5a5ebfda0355c7317af98b219ebadd9/ss_b72fc470f5a5ebfda0355c7317af98b219ebadd9.600x338.jpg?t=1792995452
+
+ss-07.jpg
+  Characters in bright water striking a large brown creature under a stone arch.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2860490/47e05e0987f887ace3feb7b467c8b5d1926b2e32/ss_47e05e0987f887ace3feb7b467c8b5d1926b2e32.600x338.jpg?t=1792995452
+
+ss-08.jpg
+  Inventory screen: a character portrait, an item grid that includes hat icons, and a highlighted crop icon.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2860490/5ba31ec7412e822019c4af036650401a90d4f562/ss_5ba31ec7412e822019c4af036650401a90d4f562.600x338.jpg?t=1792995452
+
+ss-09.jpg
+  A party menu of several hatted villagers beside a fenced field of white flowers.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2860490/40789f703d0d6f9f6dd4f7d9f732659d02807043/ss_40789f703d0d6f9f6dd4f7d9f732659d02807043.600x338.jpg?t=1792995452
+
+ss-10.jpg
+  A character on a wooden raft on open water, with a dialogue box.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2860490/fa6ceb1986e80c8380382d936282569a58d4215b/ss_fa6ceb1986e80c8380382d936282569a58d4215b.600x338.jpg?t=1792995452
+
+ss-11.jpg
+  A cave or ruin fight with a purple area effect and a hotbar.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2860490/1137d356b0f82211837a5e8d2a0b2c373d9ffab2/ss_1137d356b0f82211837a5e8d2a0b2c373d9ffab2.600x338.jpg?t=1792995452
+
+ss-12.jpg
+  A blonde performer on a castle-themed concert stage with speakers and spotlights.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2860490/0bf5cd754ecf50d90439ce2094dc8f5a880aff7d/ss_0bf5cd754ecf50d90439ce2094dc8f5a880aff7d.600x338.jpg?t=1792995452

@@ -1,0 +1,70 @@
+---
+title: "About the Warota Guide — Disclaimer and Privacy"
+description: "warota.wiki is an unofficial English fan guide for Warota: I Live Next to The Demon King's Castle LOL. Disclaimer, privacy, analytics, and the Steam image credits."
+h1: "About this unofficial guide"
+section: "About"
+order: 5
+verifiedAgainst: "Site policy for warota.wiki, plus the Steam store page, demo appdetails, and the official site at one-or-eight.co.jp/WRT/, checked 12 Nov 2026."
+quickAnswer:
+  - "Warota Guide is a fan site for https://warota.wiki. It is not affiliated with One or Eight, Team EARTHWARS, Valve, or Steam."
+  - "The full title on the Steam page is Warota: I Live Next to The Demon King's Castle LOL, AppID 2860490. Pages here are English on purpose."
+  - "Artwork is official Steam store art for that AppID, stored with the site. Credits are in the attribution file next to the images. Library-hero URLs returned 404 on the day they were requested."
+  - "analytics.gaId is empty, so Google Analytics is not loaded. The ad slot is disabled and its ids are empty. There is no redeem-code page."
+sources:
+  - label: "Steam store — Warota: I Live Next to The Demon King's Castle LOL"
+    url: "https://store.steampowered.com/app/2860490/Warota_I_Live_Next_to_The_Demon_Kings_Castle_LOL/"
+  - label: "Official site"
+    url: "https://one-or-eight.co.jp/WRT/"
+  - label: "One or Eight privacy policy"
+    url: "https://one-or-eight.co.jp/company/privacy_policy.html"
+related:
+  - href: "/guide"
+    label: "Guide"
+  - href: "/village"
+    label: "Village"
+  - href: "/hats"
+    label: "Hats"
+  - href: "/demon-king"
+    label: "Demon King"
+banner: "/images/official/steam/header.jpg"
+bannerAlt: "Official Steam header for Warota: I Live Next to The Demon King's Castle LOL, with the title logo and a blonde idol beside a village"
+---
+
+import Callout from '@framework/components/Callout.astro';
+
+This is a short English wiki for **Warota: I Live Next to The Demon King's Castle LOL**, Steam AppID **2860490**, built as a static site for **warota.wiki**.
+
+## Disclaimer
+
+warota.wiki is an unofficial fan-made guide. It is **not affiliated with, endorsed by, or sponsored by One or Eight, Team EARTHWARS, Valve, or Steam**. All game content, names, artwork, and trademarks belong to their respective owners. The Steam legal notice says © oneoreight All Rights Reserved. This site does not sell the game, process purchases, or recover accounts.
+
+Nothing here is account support. The Steam appdetails support email is support@studio18.co.jp. The website printed on the store page is https://one-or-eight.co.jp/WRT/. That mailbox and that site belong to the publisher side of the game, not to this wiki. The Steam link bar also lists X (https://x.com/EarthWarsJP), a YouTube channel, TikTok, Instagram, and Discord invite `M2WjEGP3sd`. The official site's own footer links a different Discord invite, `yPvBg3gnbu`, and the company account https://x.com/OneorEightINC. Both pairs were on those pages on 12 November 2026. This wiki did not test which invite is current.
+
+The [guide](/guide), [village](/village), [hats](/hats), and [Demon King](/demon-king) pages quote dated Steam text. A class name, a blessing effect, or a defense step appears only when the store used it. There is no codes page because those sources do not publish a redeem program. There is no wave timer because those sources do not publish one.
+
+<Callout kind="note" title="What “checked” means">
+“Checked 12 Nov 2026” means the Steam API, the English store page, the demo listing, and the official site were read that day. It does not mean someone finished the Early Access build. The full game was still marked coming soon, with a planned date of 13 November 2026.
+</Callout>
+
+## Images
+
+The store header, the 616×353 capsule, the 231×87 capsule, and the screenshots are official Steam store assets for AppID 2860490. They were downloaded from the Steam CDN and are served from this site so pages do not hotlink Steam. The file list and source URLs are in [ATTRIBUTION.txt](/images/official/steam/ATTRIBUTION.txt).
+
+Unhashed `library_hero.jpg`, `library_hero_2x.jpg`, and `library_header.jpg` returned HTTP 404 on 12 November 2026. The homepage hero is the store capsule, which did return.
+
+## Privacy
+
+The site is static. It has no accounts and does not ask for your Steam login.
+
+`analytics.gaId` is an empty string. The base layout does not load a Google Analytics tag.
+
+The Adsterra slot named `afterQuickAnswer` is present in the layout and turned off. `ads.config.ts` sets `enabled` to false, and the slot id and script URL are empty strings. No advertising script from another game is included. Adult and sensitive categories stay off. The 404 page does not render a slot.
+
+The same privacy note is in the footer of every page, under the heading Privacy. The disclaimer paragraph in that footer is the short form of this page.
+
+## What is still unpublished
+
+- A numeric Steam price. The 12 November appdetails payload had an empty package list, and `is_free` was false. The Early Access note refers to "its current price" without printing it.
+- Whether the SPEC line "Steam / Winter 2026" on the English official site will be edited to match the 13 November banner and the Steam release field.
+- A Job Class roster, a blessing table, a building cost list, and a Demon King Live wave chart.
+- A public library-hero image. The usual CDN paths 404'd on the check day.

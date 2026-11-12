@@ -1,0 +1,265 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@framework/layouts/BaseLayout.astro';
+import QuickAnswer from '@framework/components/QuickAnswer.astro';
+import AdSlot from '@framework/components/AdSlot.astro';
+import FaqList from '@framework/components/FaqList.astro';
+import { loadData } from '@framework/lib/content';
+import { siteConfig } from '@site/site.config';
+import { faqJsonLd, websiteJsonLd } from '@framework/lib/seo';
+
+const meta = loadData<{
+  release: string;
+  price: string;
+  priceNote: string;
+  players: string;
+  playersNote: string;
+  reviews: string;
+  reviewsNote: string;
+  modes: string;
+  modesNote: string;
+  platforms: string;
+}>('meta');
+
+const faq = loadData<{ q: string; a: string; featured?: boolean }[]>('faq');
+const pages = (await getCollection('pages')).sort((a, b) => a.data.order - b.data.order);
+
+const art = {
+  header: '/images/official/steam/header.jpg',
+  hero: '/images/official/steam/capsule-616x353.jpg',
+  capsule: '/images/official/steam/capsule-616x353.jpg',
+  pavilion: '/images/official/steam/ss-00.jpg',
+  night: '/images/official/steam/ss-01.jpg',
+  fields: '/images/official/steam/ss-02.jpg',
+  inventory: '/images/official/steam/ss-08.jpg',
+  party: '/images/official/steam/ss-09.jpg',
+  stage: '/images/official/steam/ss-12.jpg',
+};
+
+const guideArt: Record<string, string> = {
+  guide: art.capsule,
+  village: art.fields,
+  hats: art.inventory,
+  'demon-king': art.stage,
+  about: art.header,
+};
+
+const doors = [
+  {
+    href: '/guide',
+    num: '01',
+    title: 'Guide',
+    text: 'The Early Access date, the Bounder setup, blessings, the demo, and the PC spec Steam printed.',
+    image: art.capsule,
+    alt: siteConfig.art.heroAlt,
+  },
+  {
+    href: '/village',
+    num: '02',
+    title: 'Village',
+    text: 'Over 30 buildings, fields, and the villagers who show up as the base grows. No crafted recipe.',
+    image: art.fields,
+    alt: 'Official Steam screenshot of fenced farm plots, two characters in wide straw hats, a windmill, and houses on a cliff',
+  },
+  {
+    href: '/hats',
+    num: '03',
+    title: 'Hats',
+    text: 'Job classes from the store examples: Farmers, Lumberjacks, Warriors, Mages, and villager hats. Not a full roster.',
+    image: art.inventory,
+    alt: 'Official Steam screenshot of an inventory screen with a character portrait and hat icons in the item grid',
+  },
+  {
+    href: '/demon-king',
+    num: '04',
+    title: 'Demon King',
+    text: 'What the store says to do when the idol’s concert sends monsters at the village.',
+    image: art.stage,
+    alt: 'Official Steam screenshot of a blonde performer on a castle-themed concert stage with speakers and spotlights',
+  },
+];
+
+const stills = [
+  {
+    src: art.fields,
+    caption: 'Fenced fields',
+    alt: 'Official Steam screenshot of straw-hatted characters working fenced farm plots beside a windmill',
+  },
+  {
+    src: art.party,
+    caption: 'Villager party',
+    alt: 'Official Steam screenshot of a party menu of hatted villagers beside a fenced field of white flowers',
+  },
+  {
+    src: art.inventory,
+    caption: 'Hat icons',
+    alt: 'Official Steam screenshot of an inventory grid that includes hat icons and a character portrait',
+  },
+  {
+    src: art.night,
+    caption: 'Night fight',
+    alt: 'Official Steam screenshot of a night village fight against a large green monster, with fireworks and a hotbar',
+  },
+  {
+    src: art.stage,
+    caption: 'Concert stage',
+    alt: 'Official Steam screenshot of a blonde performer on a concert stage between castle turrets and speakers',
+  },
+  {
+    src: art.pavilion,
+    caption: 'Columned pavilion',
+    alt: 'Official Steam screenshot of a small character facing a tall white-robed figure inside a blue columned pavilion',
+  },
+];
+---
+<BaseLayout
+  title={siteConfig.homeTitle}
+  description={siteConfig.homeDescription}
+  jsonLd={[
+    websiteJsonLd(),
+    faqJsonLd(faq.filter((item) => item.featured).map((item) => ({ q: item.q, a: item.a }))),
+  ]}
+>
+  <main id="content">
+    <div class="shell">
+      <p class="tape">
+        <span>Fan guide · not affiliated with One or Eight or Team EARTHWARS</span>
+        <span>Steam App {siteConfig.steamAppId}</span>
+        <span>{siteConfig.version.label}</span>
+      </p>
+
+      <section class="town-hero">
+        <img
+          class="hero-art"
+          src={siteConfig.art.hero}
+          alt={siteConfig.art.heroAlt}
+          width="616"
+          height="353"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <div class="hero-panel">
+          <p class="kicker">{siteConfig.developer} · Early Access planned {meta.release}</p>
+          <h1>Warota opens Early Access on 13 November 2026.</h1>
+          <p class="lede">
+            <em>{siteConfig.fullTitle}</em> is a village-building action RPG still marked coming soon on Steam.
+            You gather resources, build a village, and swap hats to change classes, until the Idol Demon King’s concert sends monsters toward the village.
+            Where a number was never printed, the page says so.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="/guide">Guide</a>
+            <a class="btn ghost" href="/village">Village</a>
+            <a class="btn ghost" href={siteConfig.steamUrl}>View on Steam</a>
+          </div>
+          <p class="version-note">{siteConfig.version.detail}</p>
+        </div>
+      </section>
+      <p class="art-credit">
+        The capsule, header, and screenshots are official Steam store assets for App {siteConfig.steamAppId}, saved from the store CDN.
+        Library-hero files were not published at the usual CDN paths on this check.
+        Credits and source URLs: <a href="/images/official/steam/ATTRIBUTION.txt">ATTRIBUTION.txt</a>.
+      </p>
+
+      <section class="section">
+        <h2>Four doors</h2>
+        <p class="section-intro">
+          Open the guide, the village build, the hat classes, or Demon King Live. There is no codes page. The sources checked do not list a redeem program.
+        </p>
+        <div class="door-grid">
+          {doors.map((door) => (
+            <a class="door" href={door.href}>
+              <span class="card-art">
+                <img src={door.image} alt={door.alt} width="600" height="338" decoding="async" />
+                <span class="num">{door.num}</span>
+              </span>
+              <span class="card-copy">
+                <h3>{door.title}</h3>
+                <p>{door.text}</p>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="section" aria-label="Official Steam screenshots">
+        <h2>The store’s own frames</h2>
+        <p class="section-intro">
+          Six screenshots from the Steam page: fields, a villager party, an inventory with hats, a night fight, a concert stage, and a columned pavilion. They are not a map or a recipe.
+        </p>
+        <div class="still-row">
+          {stills.map((still) => (
+            <figure>
+              <img src={still.src} alt={still.alt} width="600" height="338" loading="lazy" decoding="async" />
+              <figcaption>{still.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <section class="stat-row" aria-label="Steam figures">
+        <div class="stat"><strong>{meta.price}</strong><span>{meta.priceNote}</span></div>
+        <div class="stat"><strong>{meta.reviews}</strong><span>{meta.reviewsNote}</span></div>
+        <div class="stat"><strong>{meta.players}</strong><span>{meta.playersNote}</span></div>
+        <div class="stat"><strong>{meta.modes}</strong><span>{meta.modesNote}</span></div>
+      </section>
+
+      <section class="section home-quick">
+        <QuickAnswer
+          sentences={[
+            'Warota: I Live Next to The Demon King’s Castle LOL is a village-building action RPG from One or Eight and Team EARTHWARS, published by One or Eight, on Steam (AppID 2860490). The store date is 13 November 2026. On 12 November 2026 the appdetails payload still marked it coming soon, Windows only, and not free.',
+            'You are a Bounder in the world of Luna. Hats set your Job Class. The store names Farmers, Lumberjacks, Warriors, and Mages as examples and says there are more than 20 classes. Goddess Statues grant stackable blessings such as attack, recovery, and elemental effects.',
+            'When the Idol Demon King holds a live concert, monsters stampede toward the village. The printed plan is villagers, fortifications, and bosses. A free demo, AppID 5214670, dated 7 October 2026, is already listed. The full game’s minimum memory line is 8 GB of RAM. The demo’s minimum line prints 8 MB.',
+            'There is no redeem-code list. A full class roster, a blessing table, and a wave timer were not on the pages checked, so they are not on this site either.',
+          ]}
+        />
+        <AdSlot name="afterQuickAnswer" />
+      </section>
+
+      <section class="section">
+        <h2>The pages</h2>
+        <p class="section-intro">
+          English only. A line from the Steam page or the official site is labeled with the day it was read. A missing stat stays missing.
+        </p>
+        <div class="card-grid">
+          {pages.map((page) => (
+            <a class="guide-card" href={`/${page.id}`}>
+              <span class="card-art">
+                <img src={guideArt[page.id] ?? art.header} alt={page.data.bannerAlt} width="600" height="338" loading="lazy" decoding="async" />
+              </span>
+              <span class="card-copy">
+                <span class="section-tag">{page.data.section}</span>
+                <h3>{page.data.h1}</h3>
+                <p>{page.data.description}</p>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="scope">
+          <div>
+            <h2>What this wiki is for</h2>
+            <p>
+              The store page, the demo, and the official site live at {siteConfig.databases.map((db, i) => (<><a href={db.href}>{db.label}</a>{i < siteConfig.databases.length - 1 ? ', ' : ''}</>))}. This site is the skim: the village build, the hat classes, the blessings paragraph, and the Demon King Live tips those sources actually print.
+            </p>
+            <p>
+              Early Access is scheduled to unlock on {meta.release}. If the client and this page disagree, trust the client.
+            </p>
+          </div>
+          <div>
+            <h2>In Steam’s words</h2>
+            <p>
+              {siteConfig.developer} develop the game. {siteConfig.publisher} publishes it. Platforms on the API: {meta.platforms}. Genres: Action, Indie, RPG, and Early Access. The official site also names Nintendo Switch 2 and PlayStation 5 for 2027. The support email on the appdetails payload is {siteConfig.supportEmail}.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-faq">
+        <h2>Short answers</h2>
+        <FaqList featuredOnly />
+      </section>
+    </div>
+  </main>
+</BaseLayout>
