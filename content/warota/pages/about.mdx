@@ -9,7 +9,7 @@ quickAnswer:
   - "Warota Guide is a fan site for https://warota.wiki. It is not affiliated with One or Eight, Team EARTHWARS, Valve, or Steam."
   - "The full title on the Steam page is Warota: I Live Next to The Demon King's Castle LOL, AppID 2860490. Pages here are English on purpose."
   - "Artwork is official Steam store art for that AppID, stored with the site. Credits are in the attribution file next to the images. Library-hero URLs returned 404 on the day they were requested."
-  - "analytics.gaId is empty, so Google Analytics is not loaded. The ad slot is disabled and its ids are empty. There is no redeem-code page."
+  - "GA4 G-V21R6C5BSQ loads on content pages. The Adsterra Native Banner after Quick Answer is enabled for this domain only. There is no redeem-code page."
 sources:
   - label: "Steam store — Warota: I Live Next to The Demon King's Castle LOL"
     url: "https://store.steampowered.com/app/2860490/Warota_I_Live_Next_to_The_Demon_Kings_Castle_LOL/"
@@ -56,9 +56,9 @@ Unhashed `library_hero.jpg`, `library_hero_2x.jpg`, and `library_header.jpg` ret
 
 The site is static. It has no accounts and does not ask for your Steam login.
 
-`analytics.gaId` is an empty string. The base layout does not load a Google Analytics tag.
+GA4 `G-V21R6C5BSQ` is set in `analytics.gaId`. The base layout loads that tag on content pages.
 
-The Adsterra slot named `afterQuickAnswer` is present in the layout and turned off. `ads.config.ts` sets `enabled` to false, and the slot id and script URL are empty strings. No advertising script from another game is included. Adult and sensitive categories stay off. The 404 page does not render a slot.
+The Adsterra Native Banner slot named `afterQuickAnswer` is enabled for warota.wiki. Zone id `2cf591c379356f90c4ddb4cc66c8322e` loads from `https://bauval.org/21/2cf591c379356f90c4ddb4cc66c8322e` on the homepage and guide pages. No advertising script from another game is included. Adult and sensitive categories stay off. The 404 page does not render a slot.
 
 The same privacy note is in the footer of every page, under the heading Privacy. The disclaimer paragraph in that footer is the short form of this page.
 

@@ -27,7 +27,7 @@ export const siteConfig = {
   homeDescription:
     "Unofficial English guide to Warota: I Live Next to The Demon King's Castle LOL (Steam AppID 2860490). Village-building action RPG from One or Eight and Team EARTHWARS. Early Access is planned for 13 November 2026 and was still marked coming soon on 12 November 2026. Not affiliated with the developers or Valve.",
   analytics: {
-    gaId: '',
+    gaId: 'G-V21R6C5BSQ',
   },
   art: {
     hero: '/images/official/steam/capsule-616x353.jpg',
