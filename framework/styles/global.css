@@ -478,11 +478,47 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; letter-spacing: 0.01em
   font-size: 0.95rem;
   margin: 0.8rem 0 1rem;
 }
+/* width: 0 + min-width: 100% locks the scrollport to the column. A table's
+   min-content can still be wider; it scrolls here instead of being cropped
+   by article.guide { overflow: hidden }. */
+.table-scroll {
+  display: block;
+  width: 0;
+  min-width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  margin: 0.8rem 0 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted) transparent;
+}
+.table-scroll::-webkit-scrollbar { height: 0.55rem; }
+.table-scroll::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 999px;
+}
+.table-scroll::-webkit-scrollbar-track { background: transparent; }
+.table-scroll:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.prose .table-scroll > table { margin: 0; }
 .prose th, .prose td {
   text-align: left;
   vertical-align: top;
   padding: 0.45rem 0.5rem;
   border-bottom: 1px solid var(--line);
+}
+/* Narrow column: the fact table is only a few pixels over, and that slack is
+   cell padding, so a tighter inline pad lets it keep wrapping with no bar.
+   At 390 the language table is about a pixel over the column; the same pad
+   trim clears that so it does not grow a scrollbar. Below 360px the language
+   table still overflows and scrolls, with header words left intact. */
+@media (max-width: 420px) {
+  .prose th, .prose td { padding-inline: 0.4rem; }
+}
+@media (max-width: 359px) {
+  .prose th, .prose td { padding-inline: 0.3rem; }
 }
 .prose th { font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
 .prose img {

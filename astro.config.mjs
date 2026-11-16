@@ -5,6 +5,7 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import { rehypeTableScroll } from './framework/lib/rehype-table-scroll.js';
 
 function sitemapXmlAlias() {
   return {
@@ -22,6 +23,9 @@ function sitemapXmlAlias() {
 export default defineConfig({
   site: 'https://warota.wiki',
   trailingSlash: 'never',
+  markdown: {
+    rehypePlugins: [rehypeTableScroll],
+  },
   integrations: [mdx(), sitemap(), sitemapXmlAlias()],
   vite: {
     plugins: [tailwindcss()],
