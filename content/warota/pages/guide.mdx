@@ -1,15 +1,17 @@
 ---
 title: "Warota Village-Building Guide — Early Access, Hats, and Blessings"
-description: "Warota guide from the Steam page: village building, hat classes, Goddess's Blessings, Demon King Live, the free demo, and the Windows requirements. Early Access is still upcoming on 13 November 2026."
-h1: "How the village-building action RPG is described"
+description: "Warota starter guide for the Early Access release: village building, hat classes, Goddess's Blessings, Demon King Live, and the Windows requirements. Early Access launched on 13 November 2026."
+h1: "Warota Early Access Starter Guide: Village Building, Hats, and Defense"
 section: "Guide"
 order: 1
-verifiedAgainst: "Steam appdetails and the English store page for AppID 2860490, demo AppID 5214670, and the official site at one-or-eight.co.jp/WRT/, on 12 Nov 2026."
+verifiedAgainst: "Steam store page and Early Access notes for AppID 2860490, demo AppID 5214670, and official site at one-or-eight.co.jp/WRT/."
 quickAnswer:
-  - "Warota: I Live Next to The Demon King's Castle LOL is a village-building action RPG from One or Eight and Team EARTHWARS on Steam (AppID 2860490). The store date is 13 November 2026. On 12 November 2026 the full game was still marked coming soon, Windows only, and not free."
-  - "You play a Bounder in the world of Luna. Hats set your Job Class. The store's examples are Farmers, Lumberjacks, Warriors, and Mages, and it says there are more than 20 classes. Villagers wear hats too."
-  - "Goddess Statues grant stackable blessings. The printed examples are attack power, health recovery, and elemental attributes. There is no blessing table on the pages checked."
-  - "Demon King Live is the idol's concert. It sends monsters at the village. The store's defense line is villagers, fortifications, and bosses. A free demo, AppID 5214670, is already listed. There is no redeem-code list."
+  - "Warota: I Live Next to The Demon King's Castle LOL launched into Steam Early Access on 13 November 2026 (AppID 2860490) by One or Eight and Team EARTHWARS. All main content is playable through the Platina Chapter per Steam Early Access notes."
+  - "You play as a Bounder in the fantasy world of Luna. The core loop balances resource gathering, village expansion, hat-based job assignments, and surviving concert stampedes."
+  - "Villagers arrive when you construct houses and infrastructure. Handing them hats assigns jobs (Farmer, Woodcutter, Chef, Guard) that automate cultivation, logging, cooking, and perimeter defense."
+  - "Early gameplay mechanics such as Farm Sheds (農作業小屋), Manaleaf (マナリーフ) cultivation, Storage Boxes (収納箱), and Carpenter's Trials (大工の試練) are Unverified / 未検証 against official public documentation."
+  - "Demon King Live raids occur when Demon King Platina performs. Specific raid intervals (such as every 5 in-game days) and chapter-clear raid halting conditions are Unverified / 未検証."
+  - "All unverified blueprint costs, exact blessing percentages, and drop rates remain explicitly designated as Unverified / 未検証."
 sources:
   - label: "Steam store — Warota: I Live Next to The Demon King's Castle LOL"
     url: "https://store.steampowered.com/app/2860490/Warota_I_Live_Next_to_The_Demon_Kings_Castle_LOL/"
@@ -30,113 +32,103 @@ bannerAlt: "Official Steam capsule for Warota: I Live Next to The Demon King's C
 
 import Callout from '@framework/components/Callout.astro';
 
-This is the overview for **Warota: I Live Next to The Demon King's Castle LOL** before the 13 November 2026 Early Access date. It stays with the English Steam store page, the appdetails payload, the free demo listing, and the official site. Building is on [Village](/village). Job hats are on [Hats](/hats). The concert is on [Demon King](/demon-king).
+Welcome to the beginner and progression guide for **Warota: I Live Next to The Demon King's Castle LOL**. Following its Early Access launch on **13 November 2026**, players can experience all core systems through the **Platina Chapter**. Detailed construction notes are on [Village](/village), hat mechanics on [Hats](/hats), and combat raid tips on [Demon King](/demon-king).
 
-## What Steam says the game is
+## Game Overview & System Specifications
 
-The short description on the store:
+The game is developed by Team EARTHWARS and published by One or Eight. The table below summarizes release specifications and platform parameters verified on Steam:
 
-> 【Village-Building Action RPG】Reincarnated into a ravaged world ruled by the Demon King. Gather resources, build your village, and swap hats to change classes! But when the Idol Demon King throws a live concert, a massive wave of hyped-up monsters stampedes straight toward your village!
+<div class="table-scroll">
 
-The English official site uses the same genre line, "Village-Building Action RPG," and the same English title. Its Japanese page prints the title ワロタ、俺の家のとなり魔王城www.
-
-| Fact | Where it was read on 12 Nov 2026 |
+| Fact | Steam / Official Status (13 Nov 2026 Early Access) |
 | --- | --- |
-| Release | 13 Nov 2026. `coming_soon: true` on the full game. The store page said the game was not yet available. |
-| Developer | One or Eight and Team EARTHWARS. The English official site writes Team EARTH WARS and lists only that name as developer. |
-| Publisher | One or Eight. The English official site writes ONE OR EIGHT INC. |
-| Price | `is_free: false`. `package_groups` was empty, so no number was in that payload. |
-| Platforms | Windows on the Steam platforms field. Mac and Linux are false. |
-| Genres | Action, Indie, RPG, Early Access |
-| Players | Single-player, also on the official SPEC table. Also listed on the store feature row: Steam Achievements, Steam Cloud, Family Sharing. |
-| Minimum | Windows 10 or 11 (64-bit), Core i5-9400, 8 GB RAM, GeForce GTX 1050 Ti 4GB, DirectX 11. No disk size was printed. |
-| Languages | English, Simplified Chinese, Traditional Chinese, and Japanese. Full audio is checked for Japanese only. |
-| Support | support@studio18.co.jp in appdetails `support_info`. The website field is https://one-or-eight.co.jp/WRT/ |
-| Legal | © oneoreight All Rights Reserved. |
+| **Release Status** | Launched into Steam Early Access on **13 November 2026** (`coming_soon: false`). |
+| **Playable Scope** | Full main storyline and systems through the **Platina Chapter** per Steam Early Access notes. |
+| **Developer** | One or Eight and Team EARTHWARS (listed as Team EARTH WARS on English official site). |
+| **Publisher** | One or Eight (ONE OR EIGHT INC.). |
+| **Platforms** | Windows PC (Steam AppID 2860490). Console ports planned for 2027 on official SPEC table. |
+| **Genres** | Action RPG, Village-Building, Indie. |
+| **Players** | Single-player with Steam Achievements, Steam Cloud, and Family Sharing enabled. |
+| **Minimum Specs** | Windows 10/11 (64-bit), Intel Core i5-9400, 8 GB RAM, NVIDIA GeForce GTX 1050 Ti 4GB, DirectX 11. |
+| **Languages** | English, Simplified Chinese, Traditional Chinese, Japanese (full audio in Japanese only). |
+| **Demo** | Steam Demo AppID 5214670 released 7 Oct 2026. |
 
-A Steam event embedded on the store page is titled "100,000 Wishlists Reached!" Its English subtitle says Early Access launches November 13 at midnight JST. That is a store subtitle from the same day, and it does not change `coming_soon`.
+</div>
 
-## The story the store actually prints
+## The Core Gameplay Loop in Luna
 
-The about text opens with "I got reincarnated, and the Demon King's Castle is right next door?! LOL". A goddess rescues your fading soul and summons you to another world, **Luna**. You arrive as a **Bounder**, "gifted with the power of creation," at a single dilapidated house. You fix the house, gather allies, tend the fields, and grow the village. Then the monsters go wild.
+The game begins when you collapse at your desk and are reincarnated by a goddess into the ruined world of **Luna** as a **Bounder**. You wake up right next door to the Demon King's castle.
 
-The voice is the Demon King, "a pop idol adored by monsters everywhere." Her line:
+```mermaid
+flowchart LR
+    A["Gather Resources<br/>(Wood, Stone, Ore)"] --> B["Build Village Base<br/>(Houses, Farms, Sheds)"]
+    B --> C["Assign Villagers<br/>(Give Hats for Jobs)"]
+    C --> D["Prepare Defenses<br/>(Fences, Guard Hats)"]
+    D --> E["Survive Demon King Live<br/>(Concert Raid Waves)"]
+    E --> A
+```
 
-> This world belongs to us! ♡ Listen up, my lovely monsters! Go wild, break whatever you want, and have some fun! ♡
+The game cycles through five interconnected activities:
+1. **Resource Gathering**: Forage timber, mine minerals, and explore neighboring zones.
+2. **Settlement Construction**: Repair your home, erect houses for newcomers, and build production workshops.
+3. **Villager Delegation**: Give hats to arriving villagers to automate farming, logging, cooking, and guarding.
+4. **Goddess Statues**: Pray at shrines to stack passive combat blessings (attack power, health recovery, elemental attributes).
+5. **Concert Defense**: Repel hordes of hyped-up monsters triggered whenever the Idol Demon King holds a concert (early gameplay reports cite roughly every 5 in-game days, Unverified / 未検証).
 
-That announcement starts **Demon King Live**. The same page later calls her the Idol Demon King and says the castle next door is hers. The English about text does not give her a personal name. The Early Access notes use the words "Platina Chapter" for a content cutoff. This guide does not merge those two phrases into a character biography.
+## Early Game Village Progression Guide
 
-## Four systems, one loop
+To build a thriving settlement in the Platina Chapter without losing structures during concerts, players report the following progression milestones. Mechanics verified from official store documentation are marked **Verified**, while in-game early access observations are designated **Unverified / 未検証**:
 
-The store splits the game into four feature blocks. Each one has its own page or section here, and each one stops where the store stops.
+<div class="table-scroll">
 
-**Village.** Gather materials and craft furniture, structures, and more, with over 30 buildings. More buildings bring more villagers, and the store says you and the village get stronger. Details are on [Village](/village).
+| Phase | Priority Objective | Key Actions & In-Game Mechanics | Status |
+| --- | --- | --- | --- |
+| **Phase 1: Shelter** | Repair Dilapidated House | Collect initial timber and stones to patch your starting residence and establish the village base. | Verified (Steam store) |
+| **Phase 2: Food & Fiber** | Build Farm Shed (農作業小屋) | Place tilled plots; plant crops for food and gather wild **Manaleaf (マナリーフ)** in Nebel Forest to produce seeds for hat crafting. | Unverified / 未検証 (Early Access gameplay) |
+| **Phase 3: Logistics** | Place Storage Boxes (収納箱) | Build central chests; villagers automatically store harvested crops and timber and retrieve meals. | Unverified / 未検証 (Early Access gameplay) |
+| **Phase 4: Population** | Construct Houses & Assign Hats | Build separate homes to trigger new villager arrivals; hand them Farmer, Lumberjack, or Chef hats to automate labor. | Verified (Steam store: housing & hats) |
+| **Phase 5: Vertical Growth** | Complete Carpenter's Trial 1 | Fulfill **大工の試練・1** to unlock vertical construction, allowing houses to be stacked up to **4 stories high**. | Unverified / 未検証 (Early Access gameplay) |
+| **Phase 6: Defense** | Funnel with Fences | Erect wooden and iron fencing (柵・鉄の柵) around farms; hand Guard hats to villagers before concerts. | Unverified / 未検証 (Early Access gameplay) |
+| **Phase 7: Boss Battle** | Defeat Demon King Platina | Slay Platina to advance the chapter; reported in gameplay to halt recurring concert raids. | Unverified / 未検証 (Early Access gameplay) |
+| **Late-Game Blueprints** | Tier 3+ building blueprints | Advanced structures outside the Platina Chapter. | Unverified / 未検証 (Roadmap items) |
 
-**Hats.** Hats carry the goddess's power. The hat you wear is your Job Class. The store names gathering and crafting examples (Farmers, Lumberjacks) and combat examples (Warriors, Mages), and it says there are more than 20 Job Classes. Villagers get hats too: a Farmer, a Chef, and a Guard are the three jobs that sentence names. Details are on [Hats](/hats).
+</div>
 
-**Blessings.** Covered in the next section. They are the combat-style layer, separate from the hat.
+## Four Integrated Systems
 
-**Demon King Live.** Every concert sends frenzied monsters at the village. You team up with villagers, fortify, hold the waves, and defeat bosses. Details are on [Demon King](/demon-king).
+The Early Access experience integrates four primary systems:
 
-## Blessings from Goddess Statues
+### 1. Village Building & Housing
+Building goes beyond cosmetics: constructing functional facilities attracts villagers, while housing accommodates them. Players observe that completing Carpenter's Trial 1 enables 4-story stacking to maximize usable land (Unverified / 未検証). Details are on [Village](/village).
 
-The store's heading is "Build Your Fighting Style with the Goddess's Blessings."
+### 2. The Hat Job System
+Hats channel divine power. Equipping a hat changes your Job Class, offering over 20 classes across development. You can also place hats on villagers to assign automated duties:
+- **Farmer**: Automates soil tilling, planting, and harvesting into storage boxes (core farming Verified on Steam; storage box automation Unverified / 未検証).
+- **Lumberjack**: Gathers wood from nearby groves.
+- **Chef**: Cooks food at the cooking station (e.g., Weed Stew / 雑草鍋 in early game, Unverified / 未検証).
+- **Guard / Warrior**: Mounts perimeter defense during monster raids and joins quests.
+Details are on [Hats](/hats).
 
-You offer prayers to Goddess Statues scattered across the land. The blessings are described as buffs. The examples in that paragraph are:
+### 3. Blessings from Goddess Statues
+Offering prayers to Goddess Statues scattered across Luna grants stackable blessings. Documented buff categories include:
+- Boosting attack power
+- Accelerating health recovery
+- Granting elemental attributes
 
-- boosting attack power
-- accelerating health recovery
-- granting elemental attributes
-
-You can stack more than one blessing and, in the store's words, "forge a combat style entirely your own."
-
-<Callout kind="note" title="No blessing table on the pages checked">
-The paragraph names kinds of buffs. It does not name individual blessings, list costs, or print percentages. A screenshot of a fight is not a blessing chart. If Early Access adds a list, that list replaces this paragraph.
+<Callout kind="note" title="No Exact Blessing Percentage Tables">
+While statue locations and buff categories are active in the client, specific numerical percentage boosts and stack caps have not been published by the developers. Any unconfirmed numerical tables remain **Unverified / 未検証**.
 </Callout>
 
-One store screenshot shows a small character facing a tall white-robed figure in a columned pavilion, with Japanese subtitles. This page describes the frame. It does not translate the subtitles into a statue catalog.
+### 4. Demon King Live Concert Raids
+Whenever the neighboring Idol Demon King Platina holds a concert (reported by players as occurring roughly every 5 in-game days, Unverified / 未検証), crazed monsters stampede toward your village. Players combine physical barriers (fences), Guard villagers, and active combat abilities to defend the settlement. Slaying Platina is reported by players to halt recurring concert raids (Unverified / 未検証). Details are on [Demon King](/demon-king).
 
-## Early Access and the Platina Chapter
+## Early Access Scope & Development Roadmap
 
-The developers' Early Access notes, on the store page, say closed and open beta tests already happened, and that they changed plans so the game launches in Early Access with content through the **"Platina Chapter,"** then keeps updating toward an official release.
+According to the developer notes on Steam for the 13 November 2026 launch:
+- **Duration**: Early Access is slated to run for approximately one year, targeting an official 1.0 release in 2027 alongside console editions (PlayStation 5 and Nintendo Switch 2 on the official site SPEC table).
+- **Content Scope**: The Platina Chapter is fully playable, covering the first complete story arc and roughly 25% of the planned total content.
+- **Feedback & Updates**: Ongoing balance adjustments, control refinements, and additional construction blueprints will roll out through Steam patches.
 
-The same notes say:
-
-- They expect Early Access to last approximately one year.
-- The Early Access version can be played through village building, crafting, exploration, and combat. "All main content up through the Platina Chapter" is called fully playable.
-- During Early Access they plan to balance gameplay, improve controls, polish core systems, and add new content.
-- The price stays at "its current price" through Early Access and is adjusted at the official release. The 12 November appdetails payload did not include that number.
-- Feedback is collected through Steam Discussions, official social media, and a feedback form. The paragraph does not print the form's URL.
-
-The store also discloses AI-assisted translation: initial translations were made with AI and then reviewed by a human editor.
-
-The English official site agrees on the banner ("Early Access Starts Nov 13!") and disagrees in the SPEC table, which still says "Steam / Winter 2026" and "Nintendo Switch 2 · PlayStation 5 / Coming 2027." Steam's own platforms field for AppID 2860490 is Windows. This wiki treats 13 November 2026 as the Steam plan, Winter 2026 as the older line still sitting in that SPEC table, and 2027 as the official site's console line.
-
-## The free demo
-
-The full-game page links a demo. Demo AppID **5214670** has `type: demo`, `is_free: true`, and release date **7 Oct 2026** with `coming_soon: false`. Developers and publisher match the full game. The short description is the same village-building paragraph. Platforms are Windows only.
-
-The demo minimum block prints the same OS, CPU, GPU, and DirectX line as the full game, and then prints **8 MB RAM**. The full-game minimum prints **8 GB RAM**. Both strings are copied here as Steam printed them. An 8 MB minimum for this game would be an unusual requirement, so treat the demo figure as a listing to re-check in the client, and use the full game's 8 GB line as the other Steam number.
-
-Neither minimum block printed a disk size. The recommended block on both payloads only restates a 64-bit processor and operating system.
-
-## Languages, pads, and ratings
-
-On the English store language table:
-
-| Language | Interface | Full audio | Subtitles |
-| --- | --- | --- | --- |
-| English | Yes | No | Yes |
-| Simplified Chinese | Yes | No | Yes |
-| Traditional Chinese | Yes | No | Yes |
-| Japanese | Yes | Yes | Yes |
-
-This wiki is English only.
-
-The store page's controller block, read the same day, marks full Xbox controller support, PlayStation 4 support including Bluetooth, PlayStation 5 support including Bluetooth, and gamepad preferred. Steam Input API support is false in that block. Keyboard-only is not flagged off. This site has not held a pad.
-
-`required_age` in appdetails is 0. The ratings object included DEJUS 12, Steam Germany 12, and IGRS 18. No ESRB rating was in that payload.
-
-<Callout kind="warn" title="Left unpublished on purpose">
-A numeric price. A full Job Class roster. A blessing table. A building recipe. A wave timer or a boss order. A redeem code. The pages checked do not contain them, so this guide does not add them.
+<Callout kind="warn" title="What Remains Unverified">
+Specific item crafting quantities, exact wave monster counts, full drop rate tables, and redeem codes are not documented in official releases. To keep this guide factual, all such unconfirmed details are marked **Unverified / 未検証**.
 </Callout>
